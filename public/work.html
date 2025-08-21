@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>Work / YaJu Lee</title>  
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  />    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="../css/style_work.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- HEADER: Copying exact structure/classes from index.html -->
+    <header class="container_1 d-flex flex-wrap align-items-center justify-content-center">
+      <ul class="nav header-nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="../index.html" class="nav-link px-2 nav-link-light">HOME</a></li>
+        <li><a href="./about.html" class="nav-link px-2 nav-link-light">ABOUT</a></li>
+        <li><a href="./work.html" class="nav-link px-2 nav-link-light">WORKS</a></li>
+        <li><a href="./lines_and_lens.html" class="nav-link px-2 nav-link-light">LINES & LENS</a></li>
+      </ul>  
+    </header>
+    <main class="main-center">
+      <div class="work-wrapper">
+        <section class="work-grid">
+          <a href="./work_project/project_Super Theater.html" class="work-card">
+            <img src="../assets/images/work_images/cover_supertheater.png" alt="project_1_cover" />
+            <h3>Super Theater</h3>
+            <p>From Urban Bricolage to Urban Regeneration</p>
+          </a>
+          <a href="./work_project/project_Micro Townhouses.html" class="work-card">
+            <img src="../assets/images/work_images/cover_microtownhouses.png" alt="Project_2_cover" />
+            <h3>Micro Townhouses</h3>
+            <p>Urban Negative Space as an Urban Density Condenser</p>
+          </a>
+          <a href="./work_project/project_Transient Metropolitan Residence.html" class="work-card">
+            <img src="../assets/images/work_images/cover_transientmetropolitan.png" alt="Project_3_cover" />
+            <h3>Transient Metropolitan Residence</h3>
+            <p>Mobile Urban Renewal Catalyst</p>
+          </a>
+          <a href="./work_project/project_Urban Articulation.html" class="work-card">
+            <img src="../assets/images/work_images/cover_urbanarticulation.png" alt="Project_4_cover" />
+            <h3>Urban Articulation</h3>
+            <p>Articulating Public-Private Hierarchies and Urban Density Disparities</p>
+          </a>
+          <a href="./work_project/project_Within Wilderness.html" class="work-card">
+            <img src="../assets/images/work_images/cover_withinwilderness.png" alt="Project_5_cover" />
+            <h3>Within Wilderness</h3>
+            <p>Vacation Retreat as an Immersive Experience of Nature's Essence</p>
+          </a>
+          <a href="./work_project/project_Road Hierarchy Study.html" class="work-card">
+            <img src="../assets/images/work_images/cover_BarcaRoadType.png" alt="Project_6_cover" />
+            <h3>Road Hierarchy Study</h3>
+            <p>Urban Roads Typology</p>
+          </a>
+          <!-- Add more <a class="work-card"> blocks as needed, each with its own href -->
+        </section>
+        <section></section>
+        <section></section>
+        <section></section>
+      </div>
+      <div class="footer-container">
+        <hr class="footer-line">
+        <p class="footer-copy">© 2025 YaJu Lee. All rights reserved.</p>
+      </div>
+    </main>
+  </div>
+  <script>
+    document.querySelectorAll('img').forEach(function(img) {
+      img.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+    });
+  </script>
+</body>
+</html>

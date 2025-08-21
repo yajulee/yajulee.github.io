@@ -1,0 +1,220 @@
+:root {
+  --nav-link-light: #bbbbbb;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Roboto', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Header: full width, matching homepage */
+.container_1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  margin-bottom: 0 !important;
+  padding: 0;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Nav within header, matching homepage */
+.header-nav {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.header-nav .nav-link {
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  color: var(--nav-link-light) !important;
+  text-decoration: none;
+  margin-right: 0;
+  transition: color 0.2s;
+}
+
+.header-nav .nav-link:hover,
+.header-nav .nav-link:focus {
+  color: #000 !important;
+}
+
+/* ---- WORK GRID ---- */
+.work-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.work-grid {
+  display: grid;
+  /* Max 4 columns, minimum 260px width each */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  /* Limit to 4 columns on large screens */
+  max-width: calc(4 * 1fr + 3 * 1rem);
+}
+
+/* Force max 4 columns at any width above 1040px (260*4) */
+@media (min-width: 1040px) {
+  .work-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+  /* Fixed aspect ratio: 4:5 (adjust as desired) */
+  aspect-ratio: 5 / 9;
+  /* Ensure content fits inside, and doesn't stretch card */
+  overflow: hidden;
+  /* Optional: fix min/max size for better feel */
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove underline from all text inside .work-card */
+.work-card,
+.work-card *,
+.work-card:visited,
+.work-card *:visited {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.work-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+/* Card inner layout with image and text areas */
+.work-card img {
+  width: 100%;
+  height: 85%;               /* Image takes 60% of card's height */
+  object-fit: cover;
+  background: #e0e0e0;
+  display: block;
+}
+
+.work-card h3,
+.work-card p {
+  width: 100%;
+  text-align: center;
+  margin: 0.3em 0;
+}
+
+.work-card h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #222;
+  margin-top: 0.8em;
+}
+
+.work-card p {
+  font-size: 1rem;
+  font-weight: 250;
+  color: #858585;
+  margin: 0.3em 0 0 0;
+  line-height: 1.2;
+  padding: 0 0.5em;
+  flex: 1 0 auto;
+}
+
+
+
+
+
+
+/* footer_START */
+.footer-container {
+  grid-column: 1 / -1; /* Span all columns */
+  width: 100%;
+  padding: 0 0 24px 0;
+  text-align: center;
+  margin-top: 24px;
+}
+.footer-line {
+  border: none;
+  border-top: 1.5px solid #bbb;
+  margin: 0 0 12px 0;
+  width: 100%;
+}
+.footer-copy {
+  font-size: 0.90rem;
+  color: #666;
+  margin: 0;
+}
+/* footer_END */
+
+
+
+/* Responsiveness (@media) */
+/* mobile: 2-column, 8-row grid */
+@media (max-width: 480px) {
+
+  .header-nav {gap: 15px;}
+  .header-nav .nav-link {
+  font-size: 10px;}
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    max-width: 100%;
+  }
+  .work-wrapper {
+    padding: 0 0.4rem;
+  }
+
+  h1 { font-size: 36px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 16px; }
+  p  { font-size: 10px; }
+}
+
+
+
+
+/* Tablet & Mobile: 2-column, 8-row grid */
+@media (min-width: 481px) and (max-width: 1024px) {
+
+  .header-nav {gap: 60px;}
+
+  .work-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    max-width: 100%;
+  }
+  .work-wrapper {
+    padding: 0 0.4rem;
+  }
+
+  h1{font-size: 75px;}
+  h2{font-size: 40px;}
+  h3{font-size: 30px;}
+  p{font-size: 20px;}
+}
+
+/* Laptop/Desktop: restore desktop grid */
