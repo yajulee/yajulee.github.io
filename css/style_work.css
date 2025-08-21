@@ -170,6 +170,14 @@ body {
 /* footer_END */
 
 
+img {
+  image-rendering: -webkit-optimize-contrast; /* Chrome, Safari */
+  image-rendering: crisp-edges;               /* Firefox */
+  image-rendering: pixelated;                 /* Edge and others */
+  image-rendering: auto;                      /* Fallback */
+}
+
+
 
 /* Responsiveness (@media) */
 /* mobile: 2-column, 8-row grid */
