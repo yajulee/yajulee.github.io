@@ -376,6 +376,11 @@ p{
   .footer-copy {font-size: 8px;}
   .footer-container {padding: 0 0 6px 0; margin-top: 6px;}
 
+  .name h1 {
+  margin: 0;
+  width: 100%;
+  text-align: center;}
+
   h1 { font-size: 36px; }
   h2 { font-size: 20px; }
   p  { font-size: 10px; }
@@ -415,6 +420,12 @@ p{
   h1{font-size: 75px;}
   h2{font-size: 40px;}
   p{font-size: 20px;}
+
+
+  .name h1 {
+  margin: 0;
+  width: 100%;
+  text-align: center;}
 }
 
 /* Laptop/Desktop: restore desktop grid */
