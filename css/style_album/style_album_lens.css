@@ -282,6 +282,8 @@ html {
     max-width: 99vw;
     min-height: 30vh;
   }
+  .album-info {
+  margin: 0px 0px 10px 10px;}
 }
 
 @media (max-width: 700px) {
@@ -295,6 +297,9 @@ html {
     max-width: 99vw;
     min-height: 30vh;
   }
+  .album-info {
+  margin: 0px 0px 10px 10px;
+  font-size: 0.5rem;}
 }
 
 @media (max-width: 480px) {
