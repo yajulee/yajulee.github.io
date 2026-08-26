@@ -308,31 +308,41 @@ body {
    ========================================================= */
 
 .file-card img {
-  display: block;
+  position: absolute;
 
-  width: 100%;
-  height: 100%;
+  /*
+    往內縮一個框線厚度，
+    這樣不會蓋到粉紅 outline
+  */
+  top: var(--line);
+  left: var(--line);
+
+  width: calc(100% - var(--line) * 2);
+  height: calc(100% - var(--line) * 2);
 
   object-fit: cover;
 
-  position: relative;
+  /*
+    圖片本身也裁成文件形狀
+  */
+  clip-path: polygon(
+    0 0,
+    calc(100% - (var(--fold) - var(--line) * 2)) 0,
+    100% calc(var(--fold) - var(--line) * 2),
+    100% 100%,
+    0 100%
+  );
+
   z-index: 1;
 
-  /*
-    While floating:
-    image is slightly transparent so the pink paper
-    and outline are more visible.
-  */
+  /* floating state */
   opacity: 0.62;
 
   transition: opacity 0.3s ease;
 }
 
 
-/*
-  Hover / paused state:
-  image becomes fully visible.
-*/
+/* hover / paused */
 .file-card.is-hovered img {
   opacity: 1;
 }
